@@ -1,0 +1,59 @@
+[0.000000] (-) TimerEvent: {}
+[0.000301] (drone_sim) JobQueued: {'identifier': 'drone_sim', 'dependencies': OrderedDict()}
+[0.001824] (drone_sim) JobStarted: {'identifier': 'drone_sim'}
+[0.099065] (-) TimerEvent: {}
+[0.199823] (-) TimerEvent: {}
+[0.301041] (-) TimerEvent: {}
+[0.402099] (-) TimerEvent: {}
+[0.503905] (-) TimerEvent: {}
+[0.605221] (-) TimerEvent: {}
+[0.706469] (-) TimerEvent: {}
+[0.807845] (-) TimerEvent: {}
+[0.909013] (-) TimerEvent: {}
+[1.010068] (-) TimerEvent: {}
+[1.111734] (-) TimerEvent: {}
+[1.212776] (-) TimerEvent: {}
+[1.314129] (-) TimerEvent: {}
+[1.415352] (-) TimerEvent: {}
+[1.516116] (-) TimerEvent: {}
+[1.618341] (-) TimerEvent: {}
+[1.719454] (-) TimerEvent: {}
+[1.821087] (-) TimerEvent: {}
+[1.922547] (-) TimerEvent: {}
+[2.025080] (-) TimerEvent: {}
+[2.049276] (drone_sim) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/drone_sim', 'build', '--build-base', '/home/chethan_ms/drone_ws/build/drone_sim/build', 'install', '--record', '/home/chethan_ms/drone_ws/build/drone_sim/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/chethan_ms/drone_ws/src/drone_sim', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'chethan_ms', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/chethan_ms', 'OLDPWD': '/home/chethan_ms', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'chethan_ms', 'NAME': 'Chethan', 'WSL_INTEROP': '/run/WSL/2016_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/chethan_ms/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/Chethan MS/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/Chethan MS/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Users/Chethan MS/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/MinGW/bin:/mnt/c/Program Files/R/R-4.5.1/bin:/mnt/c/Program Files/Java/jdk-21/bin:/mnt/c/Users/Chethan MS/Downloads/apache-maven-3.9.11-bin/apache-maven-3.9.11/bin:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/MySQL/MySQL Server 8.0/bin:/mnt/c/Program Files/MongoDB/Server/8.2/bin:/mnt/c/Program Files/MongoDB/mongosh-2.5.9-win32-x64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Program Files/nodejs/:/mnt/c/maven/apache-maven-3.9.9/bin:/mnt/c/Users/Chethan MS/Downloads/win_flex_bison-2.5.25:/mnt/c/Users/Chethan MS/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/Chethan MS/AppData/Local/Programs/Python/Python310/:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/MinGW/bin:/mnt/c/Program Files/R/R-4.5.1/bin:/mnt/c/Program Files/Java/jdk-21/bin:/mnt/c/Users/Chethan MS/Downloads/apache-maven-3.9.11-bin/apache-maven-3.9.11/bin:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/MySQL/MySQL Server 8.0/bin:/mnt/c/Program Files/MongoDB/Server/8.2/bin:/mnt/c/Program Files/MongoDB/mongosh-2.5.9-win32-x64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Program Files/nodejs/:/mnt/c/Users/Chethan MS/AppData/Local/Programs/Python/Launcher/:/mnt/c/Program Files/MySQL/MySQL Shell 9.4/bin/:/mnt/c/Users/Chethan MS/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/Chethan MS/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/Chethan MS/Downloads/python-3.13.2-amd64.exe:/mnt/c/Users/Chethan MS/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/apache-maven-3.9.13/bin:/mnt/c/Users/Chethan MS/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/opt/xtensa-esp-elf/bin/', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/chethan_ms/drone_ws/build/drone_sim', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/chethan_ms/drone_ws/build/drone_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}, 'shell': False}
+[2.127059] (-) TimerEvent: {}
+[2.228717] (-) TimerEvent: {}
+[2.329737] (-) TimerEvent: {}
+[2.430429] (-) TimerEvent: {}
+[2.531427] (-) TimerEvent: {}
+[2.632477] (-) TimerEvent: {}
+[2.733113] (-) TimerEvent: {}
+[2.776815] (drone_sim) StdoutLine: {'line': b'running egg_info\n'}
+[2.778867] (drone_sim) StdoutLine: {'line': b'writing ../../build/drone_sim/drone_sim.egg-info/PKG-INFO\n'}
+[2.779492] (drone_sim) StdoutLine: {'line': b'writing dependency_links to ../../build/drone_sim/drone_sim.egg-info/dependency_links.txt\n'}
+[2.783679] (drone_sim) StdoutLine: {'line': b'writing entry points to ../../build/drone_sim/drone_sim.egg-info/entry_points.txt\n'}
+[2.785633] (drone_sim) StdoutLine: {'line': b'writing requirements to ../../build/drone_sim/drone_sim.egg-info/requires.txt\n'}
+[2.786086] (drone_sim) StdoutLine: {'line': b'writing top-level names to ../../build/drone_sim/drone_sim.egg-info/top_level.txt\n'}
+[2.795454] (drone_sim) StdoutLine: {'line': b"reading manifest file '../../build/drone_sim/drone_sim.egg-info/SOURCES.txt'\n"}
+[2.799405] (drone_sim) StdoutLine: {'line': b"writing manifest file '../../build/drone_sim/drone_sim.egg-info/SOURCES.txt'\n"}
+[2.800635] (drone_sim) StdoutLine: {'line': b'running build\n'}
+[2.801291] (drone_sim) StdoutLine: {'line': b'running build_py\n'}
+[2.804386] (drone_sim) StdoutLine: {'line': b'running install\n'}
+[2.805919] (drone_sim) StdoutLine: {'line': b'running install_lib\n'}
+[2.811017] (drone_sim) StdoutLine: {'line': b'running install_data\n'}
+[2.811928] (drone_sim) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.818292] (drone_sim) StdoutLine: {'line': b"removing '/home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[2.819777] (drone_sim) StdoutLine: {'line': b'Copying ../../build/drone_sim/drone_sim.egg-info to /home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim-0.0.0-py3.10.egg-info\n'}
+[2.824566] (drone_sim) StdoutLine: {'line': b'running install_scripts\n'}
+[2.833456] (-) TimerEvent: {}
+[2.929394] (drone_sim) StdoutLine: {'line': b'Installing detection_node script to /home/chethan_ms/drone_ws/install/drone_sim/lib/drone_sim\n'}
+[2.930751] (drone_sim) StdoutLine: {'line': b'Installing mavros_control script to /home/chethan_ms/drone_ws/install/drone_sim/lib/drone_sim\n'}
+[2.932362] (drone_sim) StdoutLine: {'line': b'Installing patrol_node script to /home/chethan_ms/drone_ws/install/drone_sim/lib/drone_sim\n'}
+[2.933113] (drone_sim) StdoutLine: {'line': b"writing list of installed files to '/home/chethan_ms/drone_ws/build/drone_sim/install.log'\n"}
+[2.933440] (-) TimerEvent: {}
+[3.034296] (-) TimerEvent: {}
+[3.107299] (drone_sim) CommandEnded: {'returncode': 0}
+[3.134744] (-) TimerEvent: {}
+[3.191177] (drone_sim) JobEnded: {'identifier': 'drone_sim', 'rc': 0}
+[3.196195] (-) EventReactorShutdown: {}

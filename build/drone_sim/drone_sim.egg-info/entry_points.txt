@@ -1,0 +1,5 @@
+[console_scripts]
+detection_node = drone_sim.detection_node:main
+mavros_control = drone_sim.mavros_control:main
+patrol_node = drone_sim.patrol_node:main
+

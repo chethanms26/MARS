@@ -1,0 +1,45 @@
+running egg_info
+creating ../../build/drone_sim/drone_sim.egg-info
+writing ../../build/drone_sim/drone_sim.egg-info/PKG-INFO
+writing dependency_links to ../../build/drone_sim/drone_sim.egg-info/dependency_links.txt
+writing entry points to ../../build/drone_sim/drone_sim.egg-info/entry_points.txt
+writing requirements to ../../build/drone_sim/drone_sim.egg-info/requires.txt
+writing top-level names to ../../build/drone_sim/drone_sim.egg-info/top_level.txt
+writing manifest file '../../build/drone_sim/drone_sim.egg-info/SOURCES.txt'
+reading manifest file '../../build/drone_sim/drone_sim.egg-info/SOURCES.txt'
+writing manifest file '../../build/drone_sim/drone_sim.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/chethan_ms/drone_ws/build/drone_sim/build
+creating /home/chethan_ms/drone_ws/build/drone_sim/build/lib
+creating /home/chethan_ms/drone_ws/build/drone_sim/build/lib/drone_sim
+copying drone_sim/mavros_control.py -> /home/chethan_ms/drone_ws/build/drone_sim/build/lib/drone_sim
+copying drone_sim/patrol_node.py -> /home/chethan_ms/drone_ws/build/drone_sim/build/lib/drone_sim
+copying drone_sim/detection_node.py -> /home/chethan_ms/drone_ws/build/drone_sim/build/lib/drone_sim
+copying drone_sim/__init__.py -> /home/chethan_ms/drone_ws/build/drone_sim/build/lib/drone_sim
+running install
+running install_lib
+creating /home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim
+copying /home/chethan_ms/drone_ws/build/drone_sim/build/lib/drone_sim/mavros_control.py -> /home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim
+copying /home/chethan_ms/drone_ws/build/drone_sim/build/lib/drone_sim/patrol_node.py -> /home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim
+copying /home/chethan_ms/drone_ws/build/drone_sim/build/lib/drone_sim/detection_node.py -> /home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim
+copying /home/chethan_ms/drone_ws/build/drone_sim/build/lib/drone_sim/__init__.py -> /home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim
+byte-compiling /home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim/mavros_control.py to mavros_control.cpython-310.pyc
+byte-compiling /home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim/patrol_node.py to patrol_node.cpython-310.pyc
+byte-compiling /home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim/detection_node.py to detection_node.cpython-310.pyc
+byte-compiling /home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/chethan_ms/drone_ws/install/drone_sim/share/ament_index
+creating /home/chethan_ms/drone_ws/install/drone_sim/share/ament_index/resource_index
+creating /home/chethan_ms/drone_ws/install/drone_sim/share/ament_index/resource_index/packages
+copying resource/drone_sim -> /home/chethan_ms/drone_ws/install/drone_sim/share/ament_index/resource_index/packages
+copying package.xml -> /home/chethan_ms/drone_ws/install/drone_sim/share/drone_sim
+creating /home/chethan_ms/drone_ws/install/drone_sim/share/drone_sim/launch
+copying launch/simulation.launch.py -> /home/chethan_ms/drone_ws/install/drone_sim/share/drone_sim/launch
+running install_egg_info
+Copying ../../build/drone_sim/drone_sim.egg-info to /home/chethan_ms/drone_ws/install/drone_sim/lib/python3.10/site-packages/drone_sim-0.0.0-py3.10.egg-info
+running install_scripts
+Installing detection_node script to /home/chethan_ms/drone_ws/install/drone_sim/lib/drone_sim
+Installing mavros_control script to /home/chethan_ms/drone_ws/install/drone_sim/lib/drone_sim
+Installing patrol_node script to /home/chethan_ms/drone_ws/install/drone_sim/lib/drone_sim
+writing list of installed files to '/home/chethan_ms/drone_ws/build/drone_sim/install.log'
