@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="disaster_world">
+
+    <!-- ===== Lighting ===== -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- ===== Ground ===== -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- ===== Collapsed building 1 ===== -->
+    <model name="collapsed_building_1">
+      <static>true</static>
+      <link name="link">
+        <pose>8 3 1.5 0.3 0.1 0.5</pose>
+        <collision name="col">
+          <geometry><box><size>6 4 3</size></box></geometry>
+        </collision>
+        <visual name="vis">
+          <geometry><box><size>6 4 3</size></box></geometry>
+          <material>
+            <ambient>0.5 0.45 0.4 1</ambient>
+            <diffuse>0.55 0.5 0.45 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===== Collapsed building 2 ===== -->
+    <model name="collapsed_building_2">
+      <static>true</static>
+      <link name="link">
+        <!-- FIX: moved from (-6, 8) to (5, 8) — inside the 0-30 search grid -->
+        <pose>5 8 1.0 -0.2 0.15 1.0</pose>
+        <collision name="col">
+          <geometry><box><size>5 3 2</size></box></geometry>
+        </collision>
+        <visual name="vis">
+          <geometry><box><size>5 3 2</size></box></geometry>
+          <material>
+            <ambient>0.45 0.4 0.38 1</ambient>
+            <diffuse>0.5 0.45 0.42 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===== Rubble block 1 ===== -->
+    <model name="rubble_1">
+      <static>true</static>
+      <link name="link">
+        <pose>4 10 0.4 0.5 0.2 0.8</pose>
+        <collision name="col">
+          <geometry><box><size>2 1.5 0.8</size></box></geometry>
+        </collision>
+        <visual name="vis">
+          <geometry><box><size>2 1.5 0.8</size></box></geometry>
+          <material><ambient>0.5 0.48 0.44 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===== Rubble block 2 ===== -->
+    <model name="rubble_2">
+      <static>true</static>
+      <link name="link">
+        <!-- FIX: moved from (-3, -5) to (3, 5) — inside the 0-30 search grid -->
+        <pose>3 5 0.3 0.1 0.4 1.2</pose>
+        <collision name="col">
+          <geometry><box><size>1.5 1 0.6</size></box></geometry>
+        </collision>
+        <visual name="vis">
+          <geometry><box><size>1.5 1 0.6</size></box></geometry>
+          <material><ambient>0.48 0.45 0.4 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===== Rubble block 3 ===== -->
+    <model name="rubble_3">
+      <static>true</static>
+      <link name="link">
+        <pose>12 4 0.5 0.3 0.0 0.6</pose>
+        <collision name="col">
+          <geometry><box><size>3 2 1</size></box></geometry>
+        </collision>
+        <visual name="vis">
+          <geometry><box><size>3 2 1</size></box></geometry>
+          <material><ambient>0.52 0.48 0.44 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===== Victim 1 (bright red sphere — detected by OpenCV) ===== -->
+    <!--
+      Position (10, 8) — inside 0-30 grid, drone will pass over it.
+      emissive value ensures it stays visibly red even in shadow.
+    -->
+    <model name="victim_1">
+      <static>true</static>
+      <link name="link">
+        <pose>10 8 0.4 0 0 0</pose>
+        <collision name="col">
+          <geometry><sphere><radius>0.4</radius></sphere></geometry>
+        </collision>
+        <visual name="vis">
+          <geometry><sphere><radius>0.4</radius></sphere></geometry>
+          <material>
+            <ambient>1.0 0.0 0.0 1</ambient>
+            <diffuse>1.0 0.0 0.0 1</diffuse>
+            <specular>0.5 0.0 0.0 1</specular>
+            <emissive>0.3 0.0 0.0 1</emissive>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===== Victim 2 ===== -->
+    <!--
+      FIX: Was at (-5, 15) — completely OUTSIDE the 0-30 search grid.
+           Drone would never fly there → victim never detected.
+           Moved to (15, 20) — well inside the grid.
+    -->
+    <model name="victim_2">
+      <static>true</static>
+      <link name="link">
+        <pose>15 20 0.4 0 0 0</pose>
+        <collision name="col">
+          <geometry><sphere><radius>0.4</radius></sphere></geometry>
+        </collision>
+        <visual name="vis">
+          <geometry><sphere><radius>0.4</radius></sphere></geometry>
+          <material>
+            <ambient>1.0 0.0 0.0 1</ambient>
+            <diffuse>1.0 0.0 0.0 1</diffuse>
+            <specular>0.5 0.0 0.0 1</specular>
+            <emissive>0.3 0.0 0.0 1</emissive>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===== Physics ===== -->
+    <physics type="ode">
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+    </physics>
+
+  </world>
+</sdf>

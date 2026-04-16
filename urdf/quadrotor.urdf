@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<robot name="quadrotor" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- ================================================================
+       BASE BODY
+  ================================================================ -->
+  <link name="base_link">
+    <inertial>
+      <mass value="1.5"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0347563" ixy="0" ixz="0"
+               iyy="0.0458929" iyz="0"
+               izz="0.0977"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.3 0.3 0.1"/>
+      </geometry>
+      <material name="dark_grey">
+        <color rgba="0.2 0.2 0.2 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.3 0.3 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ================================================================
+       CAMERA LINK
+       Small marker box — just for visualisation in RViz
+  ================================================================ -->
+  <link name="camera_link">
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0"
+               iyy="1e-6" iyz="0"
+               izz="1e-6"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <material name="camera_red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- ================================================================
+       CAMERA JOINT
+       FIX: rpy was "0 1.5708 0" (+90° pitch = faces SIDEWAYS/UP).
+            Correct value is "0 -1.5708 0" (−90° pitch = faces DOWN).
+  ================================================================ -->
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0 0 -0.05" rpy="0 -1.5708 0"/>
+  </joint>
+
+  <!-- ================================================================
+       GAZEBO CAMERA SENSOR
+  ================================================================ -->
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="down_camera">
+      <update_rate>30.0</update_rate>
+
+      <camera name="head">
+        <horizontal_fov>1.5708</horizontal_fov>  <!-- 90 degrees -->
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+
+      <!--
+        FIX: Added <robotNamespace>/</robotNamespace>
+             Without this the topic name can become ambiguous
+             depending on how Gazebo resolves the namespace.
+             Explicitly setting "/" ensures the topic is always
+             published as /camera/image_raw — matching detection_node.
+      -->
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>30.0</updateRate>
+        <robotNamespace>/</robotNamespace>
+        <cameraName>camera</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- ================================================================
+       PX4 MAVLINK INTERFACE PLUGIN
+       Handles motor simulation and MAVLink UDP communication with PX4 SITL.
+  ================================================================ -->
+  <gazebo>
+    <plugin name="mavlink_interface" filename="libgazebo_mavlink_interface.so">
+      <robotNamespace></robotNamespace>
+      <imuSubTopic>/imu</imuSubTopic>
+      <mavlink_addr>INADDR_ANY</mavlink_addr>
+      <mavlink_udp_port>14560</mavlink_udp_port>
+      <serialEnabled>false</serialEnabled>
+      <motorSpeedCommandPubTopic>/gazebo/command/motor_speed</motorSpeedCommandPubTopic>
+      <enable_lockstep>true</enable_lockstep>
+      <use_tcp>true</use_tcp>
+    </plugin>
+  </gazebo>
+
+</robot>
